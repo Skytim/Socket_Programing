@@ -47,7 +47,10 @@ public class server {
 				try {
 					synchronized (this) {
 						Socket socket = serverSocket.accept();
+						
+						
 						clients.addElement(new SystemChatAssistor(socket));
+						
 						System.out.println(new StringBuffer(socket
 								.getInetAddress().getHostAddress()).append("/")
 								.append(socket.getPort()).append("連接."));
